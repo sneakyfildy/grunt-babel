@@ -19,10 +19,11 @@ module.exports = function (grunt) {
 			test: ['test/tmp/**']
 		}
 	});
-
+	
 	grunt.loadTasks('tasks');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
-
+	
+	grunt.file.setBase('../');
 	grunt.registerTask('default', ['clean', 'babel', 'nodeunit', 'clean']);
 };
